@@ -1,97 +1,109 @@
-@import url('https://fonts.googleapis.com/css?family-Poppins:200,300,400,500,600,700,800,900&display=swap');
-
-* {
-    margin: 0;
+*,
+*:before,
+*:after{
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
-    font-family: 'Poppins',sans-serif;
 }
-
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background: linear-gradient(#2196f3,#e91e63);
-
-}
-body::before{
-    content: ' ';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(#2196f3,#e91e63);
-    clip-path: circle(20% at 10% 10%);
+body{
+    height: 100vh;
+   background: linear-gradient(to right,#2193b0 , #6dd5ed);
 }
 .container{
+    width: 40%;
+    min-width: 450px;
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 1200px;
-    flex-wrap: wrap;
-    z-index: 1;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    padding: 30px 40px;
+    background: rgba(255, 255, 255, 0.1);
+    
+    backdrop-filter: blur(40px);
+    border-radius: 19px;
 }
-.container .card {
-     position: relative;
-     width: 280px;
-     height: 400px;
-     margin: 30px;
-     box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.5);
-     border-radius: 15px;
-     background: rgba(255, 255, 255, 0.1);
-     overflow: hidden;
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     border-top: 1px solid rgba(255, 255, 255, 0.5);
-     border-left: 1px solid rgba(255, 255, 255, 0.5);
-     backdrop-filter: blur(5px);
-}
-.container .card .content {
-    padding: 10px;
-    text-align: center;
-    transform: translateY(100px);
-    opacity: 0;
-    transition: 0.7s;
-}
-.container .card:hover .content {
-    transform: translateY(0px);
-    opacity: 1;
-}
-.container .card .content h2 {
-    position: absolute;
-    top: -90px;
-    right: 30px;
-    font-size: 8em;
-    color: rgba(255, 255, 255, 0.05);
-    pointer-events: none;
-}
-.container .card .content h3 
-{
-    font-size: 1.8em;
-    color: white;
-    z-index: 1;
-}
-.container .card .content p {
-    font-size: 1em;
-    color: white;
-    font-weight: 300;
-
-}
-.container .card .content a {
-
+#newtask{
     position: relative;
-    display: inline-block;
-    padding: 8px 20px;
-    margin-top: 15px;
-    background: #fff;
-    color: #000;
-    border-radius: 20px;
-    text-decoration: none;
+    background-color: #07da9a;
+    padding: 30px 20px;
+    border-radius: 5px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+}
+#newtask input{
+    width: 70%;
+    width: 70%;
+    height: 45px;
+    font-family: 'Poppins',sans-serif;
+    font-size: 15px;
+    border: 2px solid #d1d3d4;
+    padding: 12px;
+    color: #000000;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
     font-weight: 500;
-    box-shadow: 0.5px 15px rgba(0, 0, 0, 0.07);
+    position: relative;
+    border-radius: 5px;
+}
+#newtask input:focus{
+    outline: none;
+    border-color: #eb3349;
+}
+
+#newtask button{
+    position: relative;
+    float: right;
+    width: 20%;
+    height: 45px;
+    border-radius: 5px;
+    font-family: 'Poppins',sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    background : linear-gradient(to right, #eb3349 , #f45c43);
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    outline: none;
+}
+#tasks{
+    background-color: #ffffff26;
+    padding: 30px 20px;
+    margin-top: 60px;
+    border-radius: 10px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+    width: 100%;
+    position: relative;
+}
+.task{
+    background: linear-gradient(to right, #3a1c71,#d76d77,#ffaf7b);
+
+    height: 50px;
+    padding: 5px 10px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    color: white;
+    justify-content: space-between;
+    border-bottom: 2px solid #92b4c578;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.task span{
+    font-family: 'Poppins',sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+}
+.task button{
+    background-color: #ff0a0a;
+    color: #ffffff;
+    height: 100%;   
+    width: 40px;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+.completed{
+    text-decoration: line-through;
+    background: linear-gradient(to right, #077bbe , #00cd5c);
 
 }
