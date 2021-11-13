@@ -1,0 +1,109 @@
+*,
+*:before,
+*:after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+   background: linear-gradient(to right,#2193b0 , #6dd5ed);
+}
+.container{
+    width: 40%;
+    min-width: 450px;
+    position: relative;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    padding: 30px 40px;
+    background: rgba(255, 255, 255, 0.1);
+    
+    backdrop-filter: blur(40px);
+    border-radius: 19px;
+}
+#newtask{
+    position: relative;
+    background-color: #07da9a;
+    padding: 30px 20px;
+    border-radius: 5px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+}
+#newtask input{
+    width: 70%;
+    width: 70%;
+    height: 45px;
+    font-family: 'Poppins',sans-serif;
+    font-size: 15px;
+    border: 2px solid #d1d3d4;
+    padding: 12px;
+    color: #000000;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    font-weight: 500;
+    position: relative;
+    border-radius: 5px;
+}
+#newtask input:focus{
+    outline: none;
+    border-color: #eb3349;
+}
+
+#newtask button{
+    position: relative;
+    float: right;
+    width: 20%;
+    height: 45px;
+    border-radius: 5px;
+    font-family: 'Poppins',sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    background : linear-gradient(to right, #eb3349 , #f45c43);
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    outline: none;
+}
+#tasks{
+    background-color: #ffffff26;
+    padding: 30px 20px;
+    margin-top: 60px;
+    border-radius: 10px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+    width: 100%;
+    position: relative;
+}
+.task{
+    background: linear-gradient(to right, #3a1c71,#d76d77,#ffaf7b);
+
+    height: 50px;
+    padding: 5px 10px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    color: white;
+    justify-content: space-between;
+    border-bottom: 2px solid #92b4c578;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.task span{
+    font-family: 'Poppins',sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+}
+.task button{
+    background-color: #ff0a0a;
+    color: #ffffff;
+    height: 100%;   
+    width: 40px;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+.completed{
+    text-decoration: line-through;
+    background: linear-gradient(to right, #077bbe , #00cd5c);
+
+}
